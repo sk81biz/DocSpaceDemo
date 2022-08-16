@@ -1,34 +1,6 @@
 version: "3.8"
 
 services: 
-  onlyoffice-backup-background-tasks:
-    build:
-      context: ./
-      dockerfile: "${DOCKERFILE}"
-      target: backup_background
-    image: "${REPO}/${STATUS}appserver-backup-background:${DOCKER_TAG}"
-
-  onlyoffice-clear-events:
-    build:
-      context: ./
-      dockerfile: "${DOCKERFILE}"
-      target: clear-events
-    image: "${REPO}/${STATUS}appserver-clear-events:${DOCKER_TAG}"
-  
-  onlyoffice-migration:
-    build:
-      context: ./
-      dockerfile: "${DOCKERFILE}"
-      target: migration
-    image: "${REPO}/${STATUS}appserver-migration:${DOCKER_TAG}"
-
-  onlyoffice-backup:
-    build:
-      context: ./
-      dockerfile: "${DOCKERFILE}"
-      target: backup
-    image: "${REPO}/${STATUS}appserver-backup:${DOCKER_TAG}"
-  
   onlyoffice-files:
     build:
       context: ./
@@ -105,27 +77,6 @@ services:
       dockerfile: "${DOCKERFILE}"
       target: ssoauth
     image: "${REPO}/${STATUS}appserver-ssoauth:${DOCKER_TAG}"
-
-  onlyoffice-webhooks-service:
-    build:
-      context: ./
-      dockerfile: "${DOCKERFILE}"
-      target: webhooks-service
-    image: "${REPO}/${STATUS}appserver-webhooks-service:${DOCKER_TAG}"
-  
-  onlyoffice-bin-share:
-    build:
-      context: ./
-      dockerfile: "${DOCKERFILE}"
-      target: bin_share
-    image: "${REPO}/${STATUS}appserver-bin-share:${DOCKER_TAG}"
-
-  onlyoffice-wait-bin-share:
-    build:
-      context: ./
-      dockerfile: "${DOCKERFILE}"
-      target: wait_bin_share
-    image: "${REPO}/${STATUS}appserver-wait-bin-share:${DOCKER_TAG}"
 
   onlyoffice-doceditor:
     build:
