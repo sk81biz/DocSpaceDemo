@@ -33,7 +33,7 @@ jobs:
           cd ./build/install/docker
           REPO="onlyoffice" \
           STATUS="4testing-" \
-          DOCKER_TAG="test" \
+          DOCKER_TAG="sk81biz" \
           DOCKERFILE="Dockerfile.app" \
           docker buildx bake -f build.yml \
           --set *.args.GIT_BRANCH="feature/github-action-build-docker" \
